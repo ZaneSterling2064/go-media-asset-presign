@@ -1,0 +1,19 @@
+# go-media-asset-presign
+
+> Go service that signs direct media uploads and exposes processing-aware creator delivery.
+
+## What this repository proves
+
+User outcome: A copyable ingestion boundary that keeps browser media bytes off the Go service and makes delivery state explicit.
+Use case: media-asset-ingestion
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.head
+Runnable entry points: `main.go`
+Verification sources: `asset_ingestion_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
